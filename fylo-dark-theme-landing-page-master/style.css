@@ -1,0 +1,255 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    color: #fff;
+    background-color: hsl(217, 28%, 15%);
+    width: 90%;
+    margin: 0 auto;
+    overflow-x: hidden;
+}
+
+h1, h2{
+    font-size: 2.2rem;
+    font-weight: 700;
+    font-family: "Raleway", sans-serif;
+    margin: auto;
+}
+
+h3{
+    font-family: "Raleway", sans-serif;
+    font-size: 1.5rem;
+}
+
+p{
+    font-size: 1rem;
+    margin: auto;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+/*=================
+    NAVIGATION
+=================*/
+header{
+    margin-top: 2em;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+}
+
+    nav ul{
+        display: flex;
+        list-style: none;
+        margin-top: 0.5em;
+    }
+
+    nav ul li{
+        margin-left: 4em;
+    }
+
+    nav a{
+        color: #fff;
+        text-decoration: none;
+        font-family: "Raleway", sans-serif;
+        font-size: 1rem;
+    }
+
+    nav a:hover, nav a:focus{
+        color: hsl(176, 68%, 64%);
+    }
+/*=================
+    INTRODUCTION
+=================*/
+.introduction{
+    text-align: center;
+    margin: 1.5em 0 4em 0;
+    position: relative;
+}
+
+    .hero{
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    .title{
+        margin: 0.95em 0 0.80em 0;
+        line-height: 1.5em;
+    }
+
+    .subtitle{
+        margin-bottom: 3em;
+        width: 80%;
+    }
+
+.cta-btn{
+    text-decoration: none;
+    color: #fff;
+    padding: 1em 5em;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    background: linear-gradient(to right, hsl(176, 68%, 64%), hsl(198, 60%, 50%));
+    border-radius: 1000px;
+    text-transform: capitalize;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+    .cta-btn:hover, .cta-btn:focus{
+        border: 2px solid cyan;
+    }
+
+/*===========
+    MAIN    
+===========*/
+.wrapper{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25em, 1fr));
+    grid-column-gap: 5em;
+    grid-row-gap: 8em;
+    margin: 10em auto;
+    text-align: center;
+}
+    
+    .text-wrapper p{
+        margin-top: 0.75em;
+        width: 80%;
+    }
+
+    .text-wrapper img{
+        margin-bottom: 1em;
+    }
+
+/*====================
+    MAIN PRODUCTIVE
+====================*/
+.main__productive{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-container{
+    margin-left: 2em;
+}
+
+    .text-container h2{
+        line-height: 1.45em;
+        margin: 0.8em 0;
+        width: 70%;
+    }
+    .text-container > .par-one{
+        width: 80%;
+    }
+
+    .text-container p{
+        font-size: 1rem;
+        width: 90%;
+        margin: 1em 0;
+    }
+.btn__container{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+    .arrow-btn{
+        text-decoration: none;
+        font-size: 1.1rem;
+        color: hsl(176, 68%, 64%);
+        transition: all 200ms ease;
+    }
+        .btn__container:hover, .btn__container:focus{
+            opacity: 0.8;
+        }
+    .arrow{
+        margin-left: 0.25em;
+    }
+    
+    .btn__container::after{
+        position: absolute;
+        content: "";
+        left: 0;
+        bottom: -0.15em;
+        height: 1px;
+        width: 100%;
+        transform: scaleX(0.28);
+        transform-origin: left;
+        background: hsl(176, 68%, 64%);
+    }
+
+/*=================
+    MEDIA QUERRIES
+=================*/
+@media (max-width: 800px){
+    nav ul li{
+        margin-left: 1em;
+    }
+    nav ul li:first-child{
+        margin-left: 0;
+    }
+    nav a{
+        font-size: 0.8rem;
+    }
+
+    .hero{
+        width: auto;    
+    }
+
+    .logo{
+        margin-top: 0.50em;
+        max-width: 6.5em;
+    }
+    .introduction h1{
+        font-size: 1.5rem;
+    }
+    .introduction p{
+        font-size: 0.8rem;
+    }
+    .cta-btn{
+        font-size: 0.95rem;
+        padding: 0.85em 4.5em;
+    }
+    .text-wrapper{
+        margin-right: 80px;
+    }
+    .main__productive{
+        flex-direction: column;
+        margin-bottom: 5em;
+    }
+
+    .text-container{
+        margin: auto;
+    }
+
+        .text-container h2{
+            font-size: 1.25rem;
+            width: auto;
+        }
+
+        .text-container p{
+            font-size: 0.85rem;
+            width: 90%;
+        }
+        .text-container > .par-one{
+            width: 95%;
+        }
+    .arrow-btn{
+        font-size: 1rem;
+    }
+        .btn__container::after{
+            display: none;
+        }
+        
+}
