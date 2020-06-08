@@ -13,12 +13,16 @@ body{
     overflow-x: hidden;
 }
 
+h1,h2,h3,h4,h5,h6{
+    margin: 0;
+}
+
 h1, h2{
     font-size: 2.2rem;
     font-weight: 700;
     font-family: "Raleway", sans-serif;
-    margin: auto;
 }
+
 
 h3{
     font-family: "Raleway", sans-serif;
@@ -190,9 +194,123 @@ nav{
     }
 
 /*=================
-    MEDIA QUERRIES
+    TESTIMONIALS
 =================*/
+.testimonials{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
+    grid-gap: 2em;
+    margin: 10em auto;
+}
+.card{
+    background-color: hsl(219, 30%, 18%);
+    width: 100%;
+    box-shadow: 0 0 20px rgba(75, 75, 75, 0.3);
+    border: 1px solid hsl(219, 30%, 16%);
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+    .card:hover{
+        box-shadow: 0 0 20px rgba(122, 122, 122, 0.5);
+    }
+.card__container{
+    padding: 2em;
+}
+
+.card__title{
+    font-size: 0.95rem;
+}
+.profile-name{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 0.85rem;
+    line-height: 1.5em;
+}
+.profile-img{
+    max-width: 2.5em;
+    border-radius: 50em;
+    margin-right: 0.75em;
+}
+.designation{
+    font-size: 0.75rem;
+    font-weight: normal;
+}
+
+.card-profile{
+    margin-top: 2em;
+    display: flex;
+    align-items: center;
+}
+
+.back-img{
+    position: absolute;
+    top: -18%;
+    left: -3%;
+    z-index: -10;
+}
+/*==================
+    CONTACT FORM
+===================*/
+.contact__form{
+    background: hsl(218, 28%, 13%);
+    width: 60%;
+    margin: 0 auto;
+    border-radius: 8px;
+    margin-bottom: 500px;
+}
+
+.form-wrapper{
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.form-title{
+    font-size: 2rem;
+}
+.form-paragraph{
+    margin: 1.5em 0;
+    font-size: 0.9rem;
+    padding: 0 4.5em;
+}
+
+.form-input{
+    display: flex;
+}
+.form-email{
+    width: 60%;
+    padding: 1.5em;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    margin-right: 1.5em;
+}
+.form-btn{
+    font-size: 1.1rem;
+    padding: 1em 2em;
+}
+.form-btn:hover, .form-btn:focus{
+    background: linear-gradient(to right, hsl(176, 45%, 54%), hsl(198, 60%, 42%));
+    border: none;
+}
+
+/*============
+    FOOTER
+============*/
+footer{
+    background: hsl(216, 53%, 9%);
+    width: 100%;
+}
+
+/*===================
+    MEDIA QUERRIES
+===================*/
 @media (max-width: 800px){
+    nav ul{
+        margin-top: 0.65em;
+    }
     nav ul li{
         margin-left: 1em;
     }
@@ -251,5 +369,53 @@ nav{
         .btn__container::after{
             display: none;
         }
-        
+    
+
+    .card__container{
+        padding: 1.5em 1em;
+    }
+    .card__title{
+        font-size: 0.75rem;
+        line-height: 1.4rem;
+    }    
+    .profile-name{
+        font-size: 0.8rem;
+        line-height: 1rem;
+    }
+    .designation{
+        font-size: 0.65rem;
+    }
+    .back-img{
+        width: 10%;
+        top: -12%;
+        left: 0;
+    }
+
+
+    .contact__form{
+        width: 100%;
+    }
+    .form-wrapper{
+        padding: 0.5em;
+    }
+    .form-title{
+        font-size: 1.35rem;
+        margin-top: 0.75em;
+    }
+    .form-paragraph{
+        font-size: 0.85rem;
+        padding: 0 1.5em;
+    }
+    .form-input{
+        flex-direction: column;
+    }
+    .form-email{
+        width: 100%;
+        margin-bottom: 1em;
+        padding: 1.2em;
+    }
+    .form-btn{
+        padding: 1em;
+        width: 100%;
+    }
 }
